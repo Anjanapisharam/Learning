@@ -12,7 +12,6 @@ from langchain_community.vectorstores import FAISS
 
 from dotenv import load_dotenv
 load_dotenv()
-
 groq_api_key=os.environ['GROQ_API_KEY']
 
 if "vector" not in st.session_state:
@@ -50,6 +49,8 @@ if prompt:
         for i, doc in enumerate(response["context"]):
             st.write(doc.page_content)
             st.write("-----------------------------------")
+            st.write("-----------------------------------")
+
         
         
     
